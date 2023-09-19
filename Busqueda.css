@@ -1,0 +1,112 @@
+:root{
+    --TipografiaTitulo : 'Oswald', sans-serif;
+    --TipografiaSecundaria: 'Ubuntu', sans-serif;
+    --TipografiaGeneral: 'Belanosima', sans-serif;
+    --FondoHeader: #0E0E1A;
+    --FondoBody: #20203D;
+    --ColorAzul: #200778;
+    --ColorAzulClaro: #0838FF;
+    --ColorVioleta: #E800B4;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    position: relative;
+    background-color: var(--FondoBody);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.Fondo{
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    opacity: .5;
+    background-color: var(--FondoHeader);
+    display: none;
+}
+.Busqueda{
+    position: relative;
+    height: 667px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 100%;
+    padding: 20px;
+    padding-top: 50px;
+    row-gap: 20px;
+    display: none;
+}
+.X{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: none;
+}
+.X:hover~span{
+    transition: .5s;
+}
+.X span:hover{
+    color: var(--ColorAzulClaro);
+    transition: .5s;
+}
+.Barra-busqueda{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    column-gap: 5px;
+}
+.Barra-busqueda input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 4px solid var(--ColorAzulClaro);
+    outline: none;
+    padding: 10px 76px 0 20px;
+    font-family: var(--TipografiaGeneral);
+    font-size: 20px;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+.Barra-busqueda button{
+    position: absolute;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+.Barra-busqueda button span{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 30px;
+    transition: .5s;
+}
+.Barra-busqueda button span:hover{
+    color: var(--ColorAzulClaro);
+    transition: .5s;
+}
+.Historial{
+    background-color: var(--FondoBody);
+}
